@@ -1,4 +1,4 @@
-University of Cebu Application
+## University of Cebu Application
 A desktop application for managing college database information. Includes features like user login, 
 registration, and validation to prevent duplicate entries.
 
