@@ -165,6 +165,21 @@ namespace UniversityOfCebu
         {
             using (OleDbConnection conn = DatabaseHelper.GetConnection())
             {
+                string checkQuery = "SELECT COUNT(*) FROM College WHERE CollegeName = @name OR CollegeCode = @code";
+                using (OleDbCommand checkCmd = new OleDbCommand(checkQuery, conn))
+                {
+                    checkCmd.Parameters.AddWithValue("@name", name);
+                    checkCmd.Parameters.AddWithValue("@code", code);
+
+                    int count = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                    if (count > 0)
+                    {
+                        MessageBox.Show("A college with the same Name or Code already exists.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+
                 conn.Open();
                 string query = "UPDATE College SET CollegeName=@name, CollegeCode=@code WHERE CollegeID=@id";
                 OleDbCommand cmd = new OleDbCommand(query, conn);
