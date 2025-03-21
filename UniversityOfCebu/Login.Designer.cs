@@ -36,6 +36,7 @@
             this.pswrd = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnregis = new System.Windows.Forms.Button();
+            this.btnexit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnlog
@@ -112,6 +113,20 @@
             this.btnregis.UseVisualStyleBackColor = false;
             this.btnregis.Click += new System.EventHandler(this.btnregis_Click);
             // 
+            // btnexit
+            // 
+            this.btnexit.BackColor = System.Drawing.Color.Transparent;
+            this.btnexit.FlatAppearance.BorderSize = 0;
+            this.btnexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnexit.ForeColor = System.Drawing.Color.Silver;
+            this.btnexit.Location = new System.Drawing.Point(-1, 427);
+            this.btnexit.Name = "btnexit";
+            this.btnexit.Size = new System.Drawing.Size(100, 29);
+            this.btnexit.TabIndex = 7;
+            this.btnexit.Text = "Exit";
+            this.btnexit.UseVisualStyleBackColor = false;
+            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,6 +134,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(286, 457);
+            this.Controls.Add(this.btnexit);
             this.Controls.Add(this.btnregis);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pswrd);
@@ -127,6 +143,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnlog);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -142,5 +159,6 @@
         private System.Windows.Forms.TextBox pswrd;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnregis;
+        private System.Windows.Forms.Button btnexit;
     }
 }

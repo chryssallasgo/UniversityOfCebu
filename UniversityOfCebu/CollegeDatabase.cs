@@ -374,6 +374,11 @@ namespace UniversityOfCebu
                 chckActive1.Checked = Convert.ToBoolean(row.Cells["IsActive2"].Value);
             }
         }
+
+        private void btnexit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 

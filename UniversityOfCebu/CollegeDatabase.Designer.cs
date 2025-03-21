@@ -74,6 +74,7 @@
             this.cmbCollege = new System.Windows.Forms.ComboBox();
             this.collegeTableAdapter = new UniversityOfCebu.Database1DataSet3TableAdapters.CollegeTableAdapter();
             this.departmentTableAdapter = new UniversityOfCebu.Database1DataSet4TableAdapters.DepartmentTableAdapter();
+            this.btnexit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet4)).BeginInit();
@@ -511,6 +512,20 @@
             // 
             this.departmentTableAdapter.ClearBeforeFill = true;
             // 
+            // btnexit
+            // 
+            this.btnexit.BackColor = System.Drawing.Color.Transparent;
+            this.btnexit.FlatAppearance.BorderSize = 0;
+            this.btnexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnexit.ForeColor = System.Drawing.Color.Silver;
+            this.btnexit.Location = new System.Drawing.Point(641, 9);
+            this.btnexit.Name = "btnexit";
+            this.btnexit.Size = new System.Drawing.Size(100, 29);
+            this.btnexit.TabIndex = 33;
+            this.btnexit.Text = "Exit";
+            this.btnexit.UseVisualStyleBackColor = false;
+            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
+            // 
             // CollegeDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -518,6 +533,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(753, 602);
+            this.Controls.Add(this.btnexit);
             this.Controls.Add(this.cmbCollege);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.chckActive1);
@@ -548,6 +564,7 @@
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Name = "CollegeDatabase";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CollegeDatabase";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -606,6 +623,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DepartmentNamee;
         private System.Windows.Forms.DataGridViewTextBoxColumn DepartmentCoded;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isActive2;
+        private System.Windows.Forms.Button btnexit;
     }
 }
 

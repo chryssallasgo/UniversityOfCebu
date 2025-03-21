@@ -37,6 +37,7 @@
             this.btnreg = new System.Windows.Forms.Button();
             this.regemail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnexit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnback
@@ -132,6 +133,20 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Email:";
             // 
+            // btnexit
+            // 
+            this.btnexit.BackColor = System.Drawing.Color.Transparent;
+            this.btnexit.FlatAppearance.BorderSize = 0;
+            this.btnexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnexit.ForeColor = System.Drawing.Color.Silver;
+            this.btnexit.Location = new System.Drawing.Point(221, 387);
+            this.btnexit.Name = "btnexit";
+            this.btnexit.Size = new System.Drawing.Size(100, 29);
+            this.btnexit.TabIndex = 16;
+            this.btnexit.Text = "Exit";
+            this.btnexit.UseVisualStyleBackColor = false;
+            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,6 +154,7 @@
             this.BackgroundImage = global::UniversityOfCebu.Properties.Resources.red_orange_gradient_1920x1080;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(634, 450);
+            this.Controls.Add(this.btnexit);
             this.Controls.Add(this.regemail);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnback);
@@ -149,6 +165,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnreg);
             this.Name = "Register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -166,5 +183,6 @@
         private System.Windows.Forms.Button btnreg;
         private System.Windows.Forms.TextBox regemail;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnexit;
     }
 }
