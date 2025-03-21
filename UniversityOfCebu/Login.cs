@@ -34,21 +34,31 @@ namespace UniversityOfCebu
                 using (OleDbConnection conn = DatabaseHelper.GetConnection())
                 {
                     conn.Open();
-                    string query = "SELECT * FROM Users ([Username], [Password]) VALUES (@usrnm, @pswrd)";
+                    string query = "SELECT COUNT(1) FROM Users WHERE [Username] = @Username AND [Password] = @Password";
                     using (OleDbCommand cmd = new OleDbCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@usrnm", usrnm.Text);
-                        cmd.Parameters.AddWithValue("@pswrd", pswrd.Text);
+                        cmd.Parameters.AddWithValue("@Username", username);
+                        cmd.Parameters.AddWithValue("@Password", password);
 
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Logged In Successfuly!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
+                CollegeDatabase collegeDatabase = new CollegeDatabase();
+                collegeDatabase.Show();
+                this.Hide();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("User does not exist: ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnregis_Click(object sender, EventArgs e)
+        {
+            Register register = new Register();
+            register.Show();
+            this.Hide();
         }
     }
 }
