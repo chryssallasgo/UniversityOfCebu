@@ -374,6 +374,15 @@ namespace UniversityOfCebu
                 chckActive1.Checked = Convert.ToBoolean(row.Cells["IsActive2"].Value);
             }
         }
+
+        private void logOut_Click(object sender, EventArgs e)
+        {
+           MessageBox.Show("Are you sure you want to log out?", "Confirm Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes);
+                this.Hide();
+                new LoginForm().Show();
+            
+
+        }
     }
 }
 
