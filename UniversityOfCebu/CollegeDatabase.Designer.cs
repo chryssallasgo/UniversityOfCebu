@@ -31,6 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CollegeDatabase));
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.DepartmentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CollegeIDs = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DepartmentNamee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DepartmentCoded = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isActive2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database1DataSet4 = new UniversityOfCebu.Database1DataSet4();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.upDel = new System.Windows.Forms.Button();
@@ -45,6 +52,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.chckActive1 = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.CollegeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CollegeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CollegeCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsActive = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.collegeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database1DataSet3 = new UniversityOfCebu.Database1DataSet3();
             this.addCol = new System.Windows.Forms.Button();
             this.upCol = new System.Windows.Forms.Button();
             this.delCol = new System.Windows.Forms.Button();
@@ -59,27 +72,14 @@
             this.chckActive = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cmbCollege = new System.Windows.Forms.ComboBox();
-            this.database1DataSet3 = new UniversityOfCebu.Database1DataSet3();
-            this.collegeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.collegeTableAdapter = new UniversityOfCebu.Database1DataSet3TableAdapters.CollegeTableAdapter();
-            this.database1DataSet4 = new UniversityOfCebu.Database1DataSet4();
-            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.departmentTableAdapter = new UniversityOfCebu.Database1DataSet4TableAdapters.DepartmentTableAdapter();
-            this.CollegeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CollegeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CollegeCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IsActive = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.DepartmentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CollegeIDs = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DepartmentNamee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DepartmentCoded = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isActive2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.collegeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.collegeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet3)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView2
@@ -98,6 +98,46 @@
             this.dataGridView2.Size = new System.Drawing.Size(708, 150);
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // DepartmentID
+            // 
+            this.DepartmentID.DataPropertyName = "DepartmentID";
+            this.DepartmentID.HeaderText = "DepartmentID";
+            this.DepartmentID.Name = "DepartmentID";
+            // 
+            // CollegeIDs
+            // 
+            this.CollegeIDs.DataPropertyName = "CollegeID";
+            this.CollegeIDs.HeaderText = "CollegeID";
+            this.CollegeIDs.Name = "CollegeIDs";
+            // 
+            // DepartmentNamee
+            // 
+            this.DepartmentNamee.DataPropertyName = "DepartmentName";
+            this.DepartmentNamee.HeaderText = "DepartmentName";
+            this.DepartmentNamee.Name = "DepartmentNamee";
+            // 
+            // DepartmentCoded
+            // 
+            this.DepartmentCoded.DataPropertyName = "DepartmentCode";
+            this.DepartmentCoded.HeaderText = "DepartmentCode";
+            this.DepartmentCoded.Name = "DepartmentCoded";
+            // 
+            // isActive2
+            // 
+            this.isActive2.DataPropertyName = "isActive";
+            this.isActive2.HeaderText = "isActive";
+            this.isActive2.Name = "isActive2";
+            // 
+            // departmentBindingSource
+            // 
+            this.departmentBindingSource.DataMember = "Department";
+            this.departmentBindingSource.DataSource = this.database1DataSet4;
+            // 
+            // database1DataSet4
+            // 
+            this.database1DataSet4.DataSetName = "Database1DataSet4";
+            this.database1DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -149,7 +189,7 @@
             this.upDep.Name = "upDep";
             this.upDep.Size = new System.Drawing.Size(113, 22);
             this.upDep.TabIndex = 9;
-            this.upDep.Text = "Update";
+            this.upDep.Text = "Edit";
             this.upDep.UseVisualStyleBackColor = false;
             this.upDep.Click += new System.EventHandler(this.upDep_Click);
             // 
@@ -266,6 +306,40 @@
             this.dataGridView1.Size = new System.Drawing.Size(708, 150);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // CollegeID
+            // 
+            this.CollegeID.DataPropertyName = "CollegeID";
+            this.CollegeID.HeaderText = "CollegeID";
+            this.CollegeID.Name = "CollegeID";
+            // 
+            // CollegeName
+            // 
+            this.CollegeName.DataPropertyName = "CollegeName";
+            this.CollegeName.HeaderText = "CollegeName";
+            this.CollegeName.Name = "CollegeName";
+            // 
+            // CollegeCode
+            // 
+            this.CollegeCode.DataPropertyName = "CollegeCode";
+            this.CollegeCode.HeaderText = "CollegeCode";
+            this.CollegeCode.Name = "CollegeCode";
+            // 
+            // IsActive
+            // 
+            this.IsActive.DataPropertyName = "isActive";
+            this.IsActive.HeaderText = "isActive";
+            this.IsActive.Name = "IsActive";
+            // 
+            // collegeBindingSource
+            // 
+            this.collegeBindingSource.DataMember = "College";
+            this.collegeBindingSource.DataSource = this.database1DataSet3;
+            // 
+            // database1DataSet3
+            // 
+            this.database1DataSet3.DataSetName = "Database1DataSet3";
+            this.database1DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // addCol
             // 
@@ -429,87 +503,13 @@
             this.cmbCollege.Size = new System.Drawing.Size(88, 21);
             this.cmbCollege.TabIndex = 32;
             // 
-            // database1DataSet3
-            // 
-            this.database1DataSet3.DataSetName = "Database1DataSet3";
-            this.database1DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // collegeBindingSource
-            // 
-            this.collegeBindingSource.DataMember = "College";
-            this.collegeBindingSource.DataSource = this.database1DataSet3;
-            // 
             // collegeTableAdapter
             // 
             this.collegeTableAdapter.ClearBeforeFill = true;
             // 
-            // database1DataSet4
-            // 
-            this.database1DataSet4.DataSetName = "Database1DataSet4";
-            this.database1DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // departmentBindingSource
-            // 
-            this.departmentBindingSource.DataMember = "Department";
-            this.departmentBindingSource.DataSource = this.database1DataSet4;
-            // 
             // departmentTableAdapter
             // 
             this.departmentTableAdapter.ClearBeforeFill = true;
-            // 
-            // CollegeID
-            // 
-            this.CollegeID.DataPropertyName = "CollegeID";
-            this.CollegeID.HeaderText = "CollegeID";
-            this.CollegeID.Name = "CollegeID";
-            // 
-            // CollegeName
-            // 
-            this.CollegeName.DataPropertyName = "CollegeName";
-            this.CollegeName.HeaderText = "CollegeName";
-            this.CollegeName.Name = "CollegeName";
-            // 
-            // CollegeCode
-            // 
-            this.CollegeCode.DataPropertyName = "CollegeCode";
-            this.CollegeCode.HeaderText = "CollegeCode";
-            this.CollegeCode.Name = "CollegeCode";
-            // 
-            // IsActive
-            // 
-            this.IsActive.DataPropertyName = "isActive";
-            this.IsActive.HeaderText = "isActive";
-            this.IsActive.Name = "IsActive";
-            // 
-            // DepartmentID
-            // 
-            this.DepartmentID.DataPropertyName = "DepartmentID";
-            this.DepartmentID.HeaderText = "DepartmentID";
-            this.DepartmentID.Name = "DepartmentID";
-            // 
-            // CollegeIDs
-            // 
-            this.CollegeIDs.DataPropertyName = "CollegeID";
-            this.CollegeIDs.HeaderText = "CollegeID";
-            this.CollegeIDs.Name = "CollegeIDs";
-            // 
-            // DepartmentNamee
-            // 
-            this.DepartmentNamee.DataPropertyName = "DepartmentName";
-            this.DepartmentNamee.HeaderText = "DepartmentName";
-            this.DepartmentNamee.Name = "DepartmentNamee";
-            // 
-            // DepartmentCoded
-            // 
-            this.DepartmentCoded.DataPropertyName = "DepartmentCode";
-            this.DepartmentCoded.HeaderText = "DepartmentCode";
-            this.DepartmentCoded.Name = "DepartmentCoded";
-            // 
-            // isActive2
-            // 
-            this.isActive2.DataPropertyName = "isActive";
-            this.isActive2.HeaderText = "isActive";
-            this.isActive2.Name = "isActive2";
             // 
             // CollegeDatabase
             // 
@@ -551,11 +551,11 @@
             this.Text = "CollegeDatabase";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.collegeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.collegeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
