@@ -23,7 +23,7 @@ namespace UniversityOfCebu
         {
             string username = usrnm.Text;
             string password = pswrd.Text;
-            if (string.IsNullOrEmpty(usrnm.Text) || string.IsNullOrEmpty(pswrd.Text))
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Invalid username or password.", "Unable to Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -34,23 +34,36 @@ namespace UniversityOfCebu
                 using (OleDbConnection conn = DatabaseHelper.GetConnection())
                 {
                     conn.Open();
+
                     string query = "SELECT COUNT(1) FROM Users WHERE [Username] = @Username AND [Password] = @Password";
+
                     using (OleDbCommand cmd = new OleDbCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@Username", username);
                         cmd.Parameters.AddWithValue("@Password", password);
 
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Logged In Successfuly!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // Use ExecuteScalar to get the count of matching rows
+                        int result = (int)cmd.ExecuteScalar();
+
+                        if (result > 0)
+                        {
+                            // User exists
+                            MessageBox.Show("Logged In Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            CollegeDatabase collegeDatabase = new CollegeDatabase();
+                            collegeDatabase.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("The username or password you entered does not exist. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
-                CollegeDatabase collegeDatabase = new CollegeDatabase();
-                collegeDatabase.Show();
-                this.Hide();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("User does not exist: ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("User does not exist: " + ex.Message + "Error" + MessageBoxButtons.OK + MessageBoxIcon.Error);
             }
         }
 
