@@ -35,6 +35,7 @@
             this.usrnm = new System.Windows.Forms.TextBox();
             this.pswrd = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnregis = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnlog
@@ -45,6 +46,7 @@
             this.btnlog.TabIndex = 0;
             this.btnlog.Text = "Login";
             this.btnlog.UseVisualStyleBackColor = true;
+            this.btnlog.Click += new System.EventHandler(this.btnlog_Click);
             // 
             // label1
             // 
@@ -96,6 +98,19 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "College \r\nDatabase";
             // 
+            // btnregis
+            // 
+            this.btnregis.BackColor = System.Drawing.Color.Transparent;
+            this.btnregis.FlatAppearance.BorderSize = 0;
+            this.btnregis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnregis.ForeColor = System.Drawing.Color.Silver;
+            this.btnregis.Location = new System.Drawing.Point(186, 427);
+            this.btnregis.Name = "btnregis";
+            this.btnregis.Size = new System.Drawing.Size(100, 29);
+            this.btnregis.TabIndex = 6;
+            this.btnregis.Text = "Register";
+            this.btnregis.UseVisualStyleBackColor = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -103,6 +118,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(286, 457);
+            this.Controls.Add(this.btnregis);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pswrd);
             this.Controls.Add(this.usrnm);
@@ -124,5 +140,6 @@
         private System.Windows.Forms.TextBox usrnm;
         private System.Windows.Forms.TextBox pswrd;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnregis;
     }
 }
