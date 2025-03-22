@@ -31,6 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CollegeDatabase));
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.DepartmentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CollegeIDs = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DepartmentNamee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DepartmentCoded = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isActive2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database1DataSet4 = new UniversityOfCebu.Database1DataSet4();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.upDel = new System.Windows.Forms.Button();
@@ -45,6 +52,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.chckActive1 = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.CollegeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CollegeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CollegeCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsActive = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.collegeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database1DataSet3 = new UniversityOfCebu.Database1DataSet3();
             this.addCol = new System.Windows.Forms.Button();
             this.upCol = new System.Windows.Forms.Button();
             this.delCol = new System.Windows.Forms.Button();
@@ -59,27 +72,15 @@
             this.chckActive = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cmbCollege = new System.Windows.Forms.ComboBox();
-            this.database1DataSet3 = new UniversityOfCebu.Database1DataSet3();
-            this.collegeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.collegeTableAdapter = new UniversityOfCebu.Database1DataSet3TableAdapters.CollegeTableAdapter();
-            this.database1DataSet4 = new UniversityOfCebu.Database1DataSet4();
-            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.departmentTableAdapter = new UniversityOfCebu.Database1DataSet4TableAdapters.DepartmentTableAdapter();
-            this.CollegeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CollegeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CollegeCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IsActive = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.DepartmentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CollegeIDs = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DepartmentNamee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DepartmentCoded = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isActive2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.logOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.collegeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.collegeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet3)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView2
@@ -93,11 +94,63 @@
             this.DepartmentCoded,
             this.isActive2});
             this.dataGridView2.DataSource = this.departmentBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 440);
+            this.dataGridView2.Location = new System.Drawing.Point(16, 542);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(708, 150);
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.Size = new System.Drawing.Size(944, 185);
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // DepartmentID
+            // 
+            this.DepartmentID.DataPropertyName = "DepartmentID";
+            this.DepartmentID.HeaderText = "DepartmentID";
+            this.DepartmentID.MinimumWidth = 6;
+            this.DepartmentID.Name = "DepartmentID";
+            this.DepartmentID.Width = 125;
+            // 
+            // CollegeIDs
+            // 
+            this.CollegeIDs.DataPropertyName = "CollegeID";
+            this.CollegeIDs.HeaderText = "CollegeID";
+            this.CollegeIDs.MinimumWidth = 6;
+            this.CollegeIDs.Name = "CollegeIDs";
+            this.CollegeIDs.Width = 125;
+            // 
+            // DepartmentNamee
+            // 
+            this.DepartmentNamee.DataPropertyName = "DepartmentName";
+            this.DepartmentNamee.HeaderText = "DepartmentName";
+            this.DepartmentNamee.MinimumWidth = 6;
+            this.DepartmentNamee.Name = "DepartmentNamee";
+            this.DepartmentNamee.Width = 125;
+            // 
+            // DepartmentCoded
+            // 
+            this.DepartmentCoded.DataPropertyName = "DepartmentCode";
+            this.DepartmentCoded.HeaderText = "DepartmentCode";
+            this.DepartmentCoded.MinimumWidth = 6;
+            this.DepartmentCoded.Name = "DepartmentCoded";
+            this.DepartmentCoded.Width = 125;
+            // 
+            // isActive2
+            // 
+            this.isActive2.DataPropertyName = "isActive";
+            this.isActive2.HeaderText = "isActive";
+            this.isActive2.MinimumWidth = 6;
+            this.isActive2.Name = "isActive2";
+            this.isActive2.Width = 125;
+            // 
+            // departmentBindingSource
+            // 
+            this.departmentBindingSource.DataMember = "Department";
+            this.departmentBindingSource.DataSource = this.database1DataSet4;
+            // 
+            // database1DataSet4
+            // 
+            this.database1DataSet4.DataSetName = "Database1DataSet4";
+            this.database1DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -105,9 +158,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(16, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(522, 42);
+            this.label1.Size = new System.Drawing.Size(652, 54);
             this.label1.TabIndex = 5;
             this.label1.Text = "Welcome to College Database";
             // 
@@ -117,9 +171,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label2.Location = new System.Drawing.Point(6, 404);
+            this.label2.Location = new System.Drawing.Point(8, 497);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 29);
+            this.label2.Size = new System.Drawing.Size(167, 36);
             this.label2.TabIndex = 6;
             this.label2.Text = "Department";
             // 
@@ -130,9 +185,10 @@
             this.upDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.upDel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upDel.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.upDel.Location = new System.Drawing.Point(607, 412);
+            this.upDel.Location = new System.Drawing.Point(809, 507);
+            this.upDel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.upDel.Name = "upDel";
-            this.upDel.Size = new System.Drawing.Size(113, 22);
+            this.upDel.Size = new System.Drawing.Size(151, 27);
             this.upDel.TabIndex = 10;
             this.upDel.Text = "Delete";
             this.upDel.UseVisualStyleBackColor = false;
@@ -145,9 +201,10 @@
             this.upDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.upDep.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upDep.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.upDep.Location = new System.Drawing.Point(488, 412);
+            this.upDep.Location = new System.Drawing.Point(651, 507);
+            this.upDep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.upDep.Name = "upDep";
-            this.upDep.Size = new System.Drawing.Size(113, 22);
+            this.upDep.Size = new System.Drawing.Size(151, 27);
             this.upDep.TabIndex = 9;
             this.upDep.Text = "Update";
             this.upDep.UseVisualStyleBackColor = false;
@@ -160,9 +217,10 @@
             this.addDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addDep.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addDep.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addDep.Location = new System.Drawing.Point(369, 412);
+            this.addDep.Location = new System.Drawing.Point(492, 507);
+            this.addDep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addDep.Name = "addDep";
-            this.addDep.Size = new System.Drawing.Size(113, 22);
+            this.addDep.Size = new System.Drawing.Size(151, 27);
             this.addDep.TabIndex = 8;
             this.addDep.Text = "Add";
             this.addDep.UseVisualStyleBackColor = false;
@@ -174,9 +232,10 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label9.Location = new System.Drawing.Point(249, 350);
+            this.label9.Location = new System.Drawing.Point(332, 431);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 14);
+            this.label9.Size = new System.Drawing.Size(102, 16);
             this.label9.TabIndex = 25;
             this.label9.Text = "Department ID:";
             // 
@@ -184,16 +243,18 @@
             // 
             this.depid.BackColor = System.Drawing.Color.DarkGray;
             this.depid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.depid.Location = new System.Drawing.Point(329, 347);
+            this.depid.Location = new System.Drawing.Point(439, 427);
+            this.depid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.depid.Name = "depid";
-            this.depid.Size = new System.Drawing.Size(92, 20);
+            this.depid.Size = new System.Drawing.Size(122, 22);
             this.depid.TabIndex = 23;
             // 
             // depcode
             // 
-            this.depcode.Location = new System.Drawing.Point(114, 373);
+            this.depcode.Location = new System.Drawing.Point(152, 459);
+            this.depcode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.depcode.Name = "depcode";
-            this.depcode.Size = new System.Drawing.Size(129, 20);
+            this.depcode.Size = new System.Drawing.Size(171, 22);
             this.depcode.TabIndex = 22;
             // 
             // label10
@@ -202,17 +263,19 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label10.Location = new System.Drawing.Point(18, 376);
+            this.label10.Location = new System.Drawing.Point(24, 463);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 14);
+            this.label10.Size = new System.Drawing.Size(123, 16);
             this.label10.TabIndex = 21;
             this.label10.Text = "Department Code:";
             // 
             // depname
             // 
-            this.depname.Location = new System.Drawing.Point(114, 347);
+            this.depname.Location = new System.Drawing.Point(152, 427);
+            this.depname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.depname.Name = "depname";
-            this.depname.Size = new System.Drawing.Size(129, 20);
+            this.depname.Size = new System.Drawing.Size(171, 22);
             this.depname.TabIndex = 20;
             // 
             // label11
@@ -221,9 +284,10 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label11.Location = new System.Drawing.Point(18, 350);
+            this.label11.Location = new System.Drawing.Point(24, 431);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(95, 14);
+            this.label11.Size = new System.Drawing.Size(125, 16);
             this.label11.TabIndex = 19;
             this.label11.Text = "Department Name:";
             // 
@@ -233,9 +297,10 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label8.Location = new System.Drawing.Point(249, 376);
+            this.label8.Location = new System.Drawing.Point(332, 463);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 14);
+            this.label8.Size = new System.Drawing.Size(53, 16);
             this.label8.TabIndex = 26;
             this.label8.Text = "Active?";
             // 
@@ -243,9 +308,10 @@
             // 
             this.chckActive1.AutoSize = true;
             this.chckActive1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.chckActive1.Location = new System.Drawing.Point(329, 376);
+            this.chckActive1.Location = new System.Drawing.Point(439, 463);
+            this.chckActive1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chckActive1.Name = "chckActive1";
-            this.chckActive1.Size = new System.Drawing.Size(44, 17);
+            this.chckActive1.Size = new System.Drawing.Size(53, 20);
             this.chckActive1.TabIndex = 30;
             this.chckActive1.Text = "Yes";
             this.chckActive1.UseVisualStyleBackColor = false;
@@ -260,12 +326,56 @@
             this.CollegeCode,
             this.IsActive});
             this.dataGridView1.DataSource = this.collegeBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 175);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 215);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(708, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(944, 185);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // CollegeID
+            // 
+            this.CollegeID.DataPropertyName = "CollegeID";
+            this.CollegeID.HeaderText = "CollegeID";
+            this.CollegeID.MinimumWidth = 6;
+            this.CollegeID.Name = "CollegeID";
+            this.CollegeID.Width = 125;
+            // 
+            // CollegeName
+            // 
+            this.CollegeName.DataPropertyName = "CollegeName";
+            this.CollegeName.HeaderText = "CollegeName";
+            this.CollegeName.MinimumWidth = 6;
+            this.CollegeName.Name = "CollegeName";
+            this.CollegeName.Width = 125;
+            // 
+            // CollegeCode
+            // 
+            this.CollegeCode.DataPropertyName = "CollegeCode";
+            this.CollegeCode.HeaderText = "CollegeCode";
+            this.CollegeCode.MinimumWidth = 6;
+            this.CollegeCode.Name = "CollegeCode";
+            this.CollegeCode.Width = 125;
+            // 
+            // IsActive
+            // 
+            this.IsActive.DataPropertyName = "isActive";
+            this.IsActive.HeaderText = "isActive";
+            this.IsActive.MinimumWidth = 6;
+            this.IsActive.Name = "IsActive";
+            this.IsActive.Width = 125;
+            // 
+            // collegeBindingSource
+            // 
+            this.collegeBindingSource.DataMember = "College";
+            this.collegeBindingSource.DataSource = this.database1DataSet3;
+            // 
+            // database1DataSet3
+            // 
+            this.database1DataSet3.DataSetName = "Database1DataSet3";
+            this.database1DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // addCol
             // 
@@ -274,9 +384,10 @@
             this.addCol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addCol.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addCol.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addCol.Location = new System.Drawing.Point(369, 150);
+            this.addCol.Location = new System.Drawing.Point(492, 185);
+            this.addCol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addCol.Name = "addCol";
-            this.addCol.Size = new System.Drawing.Size(113, 22);
+            this.addCol.Size = new System.Drawing.Size(151, 27);
             this.addCol.TabIndex = 2;
             this.addCol.Text = "Add";
             this.addCol.UseVisualStyleBackColor = false;
@@ -289,9 +400,10 @@
             this.upCol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.upCol.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upCol.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.upCol.Location = new System.Drawing.Point(488, 150);
+            this.upCol.Location = new System.Drawing.Point(651, 185);
+            this.upCol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.upCol.Name = "upCol";
-            this.upCol.Size = new System.Drawing.Size(113, 22);
+            this.upCol.Size = new System.Drawing.Size(151, 27);
             this.upCol.TabIndex = 3;
             this.upCol.Text = "Edit";
             this.upCol.UseVisualStyleBackColor = false;
@@ -304,9 +416,10 @@
             this.delCol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delCol.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delCol.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.delCol.Location = new System.Drawing.Point(607, 150);
+            this.delCol.Location = new System.Drawing.Point(809, 185);
+            this.delCol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.delCol.Name = "delCol";
-            this.delCol.Size = new System.Drawing.Size(113, 22);
+            this.delCol.Size = new System.Drawing.Size(151, 27);
             this.delCol.TabIndex = 4;
             this.delCol.Text = "Delete";
             this.delCol.UseVisualStyleBackColor = false;
@@ -318,9 +431,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label3.Location = new System.Drawing.Point(6, 139);
+            this.label3.Location = new System.Drawing.Point(8, 171);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 29);
+            this.label3.Size = new System.Drawing.Size(116, 36);
             this.label3.TabIndex = 7;
             this.label3.Text = "College";
             // 
@@ -330,18 +444,20 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label4.Location = new System.Drawing.Point(18, 88);
+            this.label4.Location = new System.Drawing.Point(24, 108);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 14);
+            this.label4.Size = new System.Drawing.Size(99, 16);
             this.label4.TabIndex = 11;
             this.label4.Text = "College Name:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // colname
             // 
-            this.colname.Location = new System.Drawing.Point(114, 85);
+            this.colname.Location = new System.Drawing.Point(152, 105);
+            this.colname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.colname.Name = "colname";
-            this.colname.Size = new System.Drawing.Size(129, 20);
+            this.colname.Size = new System.Drawing.Size(171, 22);
             this.colname.TabIndex = 12;
             this.colname.TextChanged += new System.EventHandler(this.depname_TextChanged);
             // 
@@ -351,26 +467,29 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label5.Location = new System.Drawing.Point(18, 114);
+            this.label5.Location = new System.Drawing.Point(24, 140);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 14);
+            this.label5.Size = new System.Drawing.Size(97, 16);
             this.label5.TabIndex = 13;
             this.label5.Text = "College Code:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // colcode
             // 
-            this.colcode.Location = new System.Drawing.Point(114, 111);
+            this.colcode.Location = new System.Drawing.Point(152, 137);
+            this.colcode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.colcode.Name = "colcode";
-            this.colcode.Size = new System.Drawing.Size(129, 20);
+            this.colcode.Size = new System.Drawing.Size(171, 22);
             this.colcode.TabIndex = 14;
             this.colcode.TextChanged += new System.EventHandler(this.depcode_TextChanged);
             // 
             // colid
             // 
-            this.colid.Location = new System.Drawing.Point(312, 85);
+            this.colid.Location = new System.Drawing.Point(416, 105);
+            this.colid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.colid.Name = "colid";
-            this.colid.Size = new System.Drawing.Size(92, 20);
+            this.colid.Size = new System.Drawing.Size(121, 22);
             this.colid.TabIndex = 16;
             // 
             // label7
@@ -379,9 +498,10 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label7.Location = new System.Drawing.Point(249, 88);
+            this.label7.Location = new System.Drawing.Point(332, 108);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 14);
+            this.label7.Size = new System.Drawing.Size(76, 16);
             this.label7.TabIndex = 18;
             this.label7.Text = "College ID:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -392,9 +512,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label6.Location = new System.Drawing.Point(249, 117);
+            this.label6.Location = new System.Drawing.Point(332, 144);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 14);
+            this.label6.Size = new System.Drawing.Size(53, 16);
             this.label6.TabIndex = 28;
             this.label6.Text = "Active?";
             // 
@@ -402,9 +523,10 @@
             // 
             this.chckActive.AutoSize = true;
             this.chckActive.BackColor = System.Drawing.SystemColors.Highlight;
-            this.chckActive.Location = new System.Drawing.Point(312, 113);
+            this.chckActive.Location = new System.Drawing.Point(416, 139);
+            this.chckActive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chckActive.Name = "chckActive";
-            this.chckActive.Size = new System.Drawing.Size(44, 17);
+            this.chckActive.Size = new System.Drawing.Size(53, 20);
             this.chckActive.TabIndex = 29;
             this.chckActive.Text = "Yes";
             this.chckActive.UseVisualStyleBackColor = false;
@@ -415,109 +537,54 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label12.Location = new System.Drawing.Point(427, 349);
+            this.label12.Location = new System.Drawing.Point(569, 430);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(57, 14);
+            this.label12.Size = new System.Drawing.Size(76, 16);
             this.label12.TabIndex = 31;
             this.label12.Text = "College ID:";
             // 
             // cmbCollege
             // 
             this.cmbCollege.FormattingEnabled = true;
-            this.cmbCollege.Location = new System.Drawing.Point(488, 346);
+            this.cmbCollege.Location = new System.Drawing.Point(651, 426);
+            this.cmbCollege.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCollege.Name = "cmbCollege";
-            this.cmbCollege.Size = new System.Drawing.Size(88, 21);
+            this.cmbCollege.Size = new System.Drawing.Size(116, 24);
             this.cmbCollege.TabIndex = 32;
-            // 
-            // database1DataSet3
-            // 
-            this.database1DataSet3.DataSetName = "Database1DataSet3";
-            this.database1DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // collegeBindingSource
-            // 
-            this.collegeBindingSource.DataMember = "College";
-            this.collegeBindingSource.DataSource = this.database1DataSet3;
             // 
             // collegeTableAdapter
             // 
             this.collegeTableAdapter.ClearBeforeFill = true;
             // 
-            // database1DataSet4
-            // 
-            this.database1DataSet4.DataSetName = "Database1DataSet4";
-            this.database1DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // departmentBindingSource
-            // 
-            this.departmentBindingSource.DataMember = "Department";
-            this.departmentBindingSource.DataSource = this.database1DataSet4;
-            // 
             // departmentTableAdapter
             // 
             this.departmentTableAdapter.ClearBeforeFill = true;
             // 
-            // CollegeID
+            // logOut
             // 
-            this.CollegeID.DataPropertyName = "CollegeID";
-            this.CollegeID.HeaderText = "CollegeID";
-            this.CollegeID.Name = "CollegeID";
-            // 
-            // CollegeName
-            // 
-            this.CollegeName.DataPropertyName = "CollegeName";
-            this.CollegeName.HeaderText = "CollegeName";
-            this.CollegeName.Name = "CollegeName";
-            // 
-            // CollegeCode
-            // 
-            this.CollegeCode.DataPropertyName = "CollegeCode";
-            this.CollegeCode.HeaderText = "CollegeCode";
-            this.CollegeCode.Name = "CollegeCode";
-            // 
-            // IsActive
-            // 
-            this.IsActive.DataPropertyName = "isActive";
-            this.IsActive.HeaderText = "isActive";
-            this.IsActive.Name = "IsActive";
-            // 
-            // DepartmentID
-            // 
-            this.DepartmentID.DataPropertyName = "DepartmentID";
-            this.DepartmentID.HeaderText = "DepartmentID";
-            this.DepartmentID.Name = "DepartmentID";
-            // 
-            // CollegeIDs
-            // 
-            this.CollegeIDs.DataPropertyName = "CollegeID";
-            this.CollegeIDs.HeaderText = "CollegeID";
-            this.CollegeIDs.Name = "CollegeIDs";
-            // 
-            // DepartmentNamee
-            // 
-            this.DepartmentNamee.DataPropertyName = "DepartmentName";
-            this.DepartmentNamee.HeaderText = "DepartmentName";
-            this.DepartmentNamee.Name = "DepartmentNamee";
-            // 
-            // DepartmentCoded
-            // 
-            this.DepartmentCoded.DataPropertyName = "DepartmentCode";
-            this.DepartmentCoded.HeaderText = "DepartmentCode";
-            this.DepartmentCoded.Name = "DepartmentCoded";
-            // 
-            // isActive2
-            // 
-            this.isActive2.DataPropertyName = "isActive";
-            this.isActive2.HeaderText = "isActive";
-            this.isActive2.Name = "isActive2";
+            this.logOut.BackColor = System.Drawing.Color.RoyalBlue;
+            this.logOut.FlatAppearance.BorderSize = 0;
+            this.logOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logOut.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOut.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.logOut.Location = new System.Drawing.Point(840, 754);
+            this.logOut.Margin = new System.Windows.Forms.Padding(4);
+            this.logOut.Name = "logOut";
+            this.logOut.Size = new System.Drawing.Size(151, 27);
+            this.logOut.TabIndex = 33;
+            this.logOut.Text = "Log out";
+            this.logOut.UseVisualStyleBackColor = false;
+            this.logOut.Click += new System.EventHandler(this.logOut_Click);
             // 
             // CollegeDatabase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(753, 602);
+            this.ClientSize = new System.Drawing.Size(1004, 820);
+            this.Controls.Add(this.logOut);
             this.Controls.Add(this.cmbCollege);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.chckActive1);
@@ -547,15 +614,16 @@
             this.Controls.Add(this.addCol);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CollegeDatabase";
             this.Text = "CollegeDatabase";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.collegeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.collegeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -606,6 +674,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DepartmentNamee;
         private System.Windows.Forms.DataGridViewTextBoxColumn DepartmentCoded;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isActive2;
+        private System.Windows.Forms.Button logOut;
     }
 }
 
