@@ -112,6 +112,24 @@ namespace UniversityOfCebu
                 using (OleDbConnection conn = DatabaseHelper.GetConnection())
                 {
                     conn.Open();
+
+                    // Check if CollegeName or CollegeCode already exists
+                    string checkQuery = "SELECT COUNT(*) FROM College WHERE CollegeName = @name OR CollegeCode = @code";
+                    using (OleDbCommand checkCmd = new OleDbCommand(checkQuery, conn))
+                    {
+                        checkCmd.Parameters.AddWithValue("@name", name);
+                        checkCmd.Parameters.AddWithValue("@code", code);
+
+                        int count = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                        if (count > 0)
+                        {
+                            MessageBox.Show("A college with the same Name or Code already exists.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
+
+                    // Insert new College record
                     string query = "INSERT INTO College (CollegeName, CollegeCode, IsActive) VALUES (@name, @code, @isActive)";
                     using (OleDbCommand cmd = new OleDbCommand(query, conn))
                     {
@@ -124,11 +142,11 @@ namespace UniversityOfCebu
                     }
                 }
 
-                // Refresh the DataGridView after adding a new record
+                // Refresh the DataGridView and ComboBox
                 LoadColleges();
                 LoadCollegesIntoComboBox();
 
-                // Clear input fields after successful insertion
+                // Clear input fields
                 colname.Clear();
                 colcode.Clear();
                 chckActive.Checked = false;
@@ -147,6 +165,21 @@ namespace UniversityOfCebu
         {
             using (OleDbConnection conn = DatabaseHelper.GetConnection())
             {
+                string checkQuery = "SELECT COUNT(*) FROM College WHERE CollegeName = @name OR CollegeCode = @code";
+                using (OleDbCommand checkCmd = new OleDbCommand(checkQuery, conn))
+                {
+                    checkCmd.Parameters.AddWithValue("@name", name);
+                    checkCmd.Parameters.AddWithValue("@code", code);
+
+                    int count = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                    if (count > 0)
+                    {
+                        MessageBox.Show("A college with the same Name or Code already exists.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+
                 conn.Open();
                 string query = "UPDATE College SET CollegeName=@name, CollegeCode=@code WHERE CollegeID=@id";
                 OleDbCommand cmd = new OleDbCommand(query, conn);
@@ -374,11 +407,29 @@ namespace UniversityOfCebu
                 chckActive1.Checked = Convert.ToBoolean(row.Cells["IsActive2"].Value);
             }
         }
-
         private void btnexit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+         private void logOut_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to log out?", "Confirm Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                // Uncomment the next line if you want to redirect to the login form
+                // new LoginForm().Show();
+        private void logOut_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to log out?", "Confirm Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                // Uncomment the next line if you want to redirect to the login form
+                // new LoginForm().Show();
+         }
     }
 }
 
