@@ -78,5 +78,10 @@ namespace UniversityOfCebu
         {
             this.Close();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
