@@ -46,7 +46,7 @@
             this.btnback.FlatAppearance.BorderSize = 0;
             this.btnback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnback.ForeColor = System.Drawing.Color.Silver;
-            this.btnback.Location = new System.Drawing.Point(360, 387);
+            this.btnback.Location = new System.Drawing.Point(337, 375);
             this.btnback.Name = "btnback";
             this.btnback.Size = new System.Drawing.Size(100, 29);
             this.btnback.TabIndex = 13;
@@ -60,11 +60,11 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(239, 32);
+            this.label3.Location = new System.Drawing.Point(214, 39);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(165, 78);
+            this.label3.Size = new System.Drawing.Size(238, 117);
             this.label3.TabIndex = 12;
-            this.label3.Text = "College \r\nDatabase";
+            this.label3.Text = "College \r\nDatabase\r\nRegister Form";
             // 
             // regpswrd
             // 
@@ -139,7 +139,7 @@
             this.btnexit.FlatAppearance.BorderSize = 0;
             this.btnexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnexit.ForeColor = System.Drawing.Color.Silver;
-            this.btnexit.Location = new System.Drawing.Point(221, 387);
+            this.btnexit.Location = new System.Drawing.Point(198, 375);
             this.btnexit.Name = "btnexit";
             this.btnexit.Size = new System.Drawing.Size(100, 29);
             this.btnexit.TabIndex = 16;
