@@ -408,6 +408,7 @@ namespace UniversityOfCebu
             }
         }
 
+<<<<<<< HEAD
         private void logOut_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to log out?", "Confirm Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -419,6 +420,11 @@ namespace UniversityOfCebu
                 // new LoginForm().Show();
             }
 
+=======
+        private void btnexit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+>>>>>>> 954b58f0184cbbdd7baaa971f663339ba63b4b82
         }
     }
 }

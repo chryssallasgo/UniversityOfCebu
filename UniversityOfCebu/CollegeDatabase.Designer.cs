@@ -74,7 +74,11 @@
             this.cmbCollege = new System.Windows.Forms.ComboBox();
             this.collegeTableAdapter = new UniversityOfCebu.Database1DataSet3TableAdapters.CollegeTableAdapter();
             this.departmentTableAdapter = new UniversityOfCebu.Database1DataSet4TableAdapters.DepartmentTableAdapter();
+<<<<<<< HEAD
             this.logOut = new System.Windows.Forms.Button();
+=======
+            this.btnexit = new System.Windows.Forms.Button();
+>>>>>>> 954b58f0184cbbdd7baaa971f663339ba63b4b82
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet4)).BeginInit();
@@ -106,41 +110,61 @@
             // 
             this.DepartmentID.DataPropertyName = "DepartmentID";
             this.DepartmentID.HeaderText = "DepartmentID";
+<<<<<<< HEAD
             this.DepartmentID.MinimumWidth = 6;
             this.DepartmentID.Name = "DepartmentID";
             this.DepartmentID.Width = 125;
+=======
+            this.DepartmentID.Name = "DepartmentID";
+>>>>>>> 954b58f0184cbbdd7baaa971f663339ba63b4b82
             // 
             // CollegeIDs
             // 
             this.CollegeIDs.DataPropertyName = "CollegeID";
             this.CollegeIDs.HeaderText = "CollegeID";
+<<<<<<< HEAD
             this.CollegeIDs.MinimumWidth = 6;
             this.CollegeIDs.Name = "CollegeIDs";
             this.CollegeIDs.Width = 125;
+=======
+            this.CollegeIDs.Name = "CollegeIDs";
+>>>>>>> 954b58f0184cbbdd7baaa971f663339ba63b4b82
             // 
             // DepartmentNamee
             // 
             this.DepartmentNamee.DataPropertyName = "DepartmentName";
             this.DepartmentNamee.HeaderText = "DepartmentName";
+<<<<<<< HEAD
             this.DepartmentNamee.MinimumWidth = 6;
             this.DepartmentNamee.Name = "DepartmentNamee";
             this.DepartmentNamee.Width = 125;
+=======
+            this.DepartmentNamee.Name = "DepartmentNamee";
+>>>>>>> 954b58f0184cbbdd7baaa971f663339ba63b4b82
             // 
             // DepartmentCoded
             // 
             this.DepartmentCoded.DataPropertyName = "DepartmentCode";
             this.DepartmentCoded.HeaderText = "DepartmentCode";
+<<<<<<< HEAD
             this.DepartmentCoded.MinimumWidth = 6;
             this.DepartmentCoded.Name = "DepartmentCoded";
             this.DepartmentCoded.Width = 125;
+=======
+            this.DepartmentCoded.Name = "DepartmentCoded";
+>>>>>>> 954b58f0184cbbdd7baaa971f663339ba63b4b82
             // 
             // isActive2
             // 
             this.isActive2.DataPropertyName = "isActive";
             this.isActive2.HeaderText = "isActive";
+<<<<<<< HEAD
             this.isActive2.MinimumWidth = 6;
             this.isActive2.Name = "isActive2";
             this.isActive2.Width = 125;
+=======
+            this.isActive2.Name = "isActive2";
+>>>>>>> 954b58f0184cbbdd7baaa971f663339ba63b4b82
             // 
             // departmentBindingSource
             // 
@@ -206,7 +230,7 @@
             this.upDep.Name = "upDep";
             this.upDep.Size = new System.Drawing.Size(151, 27);
             this.upDep.TabIndex = 9;
-            this.upDep.Text = "Update";
+            this.upDep.Text = "Edit";
             this.upDep.UseVisualStyleBackColor = false;
             this.upDep.Click += new System.EventHandler(this.upDep_Click);
             // 
@@ -339,33 +363,49 @@
             // 
             this.CollegeID.DataPropertyName = "CollegeID";
             this.CollegeID.HeaderText = "CollegeID";
+<<<<<<< HEAD
             this.CollegeID.MinimumWidth = 6;
             this.CollegeID.Name = "CollegeID";
             this.CollegeID.Width = 125;
+=======
+            this.CollegeID.Name = "CollegeID";
+>>>>>>> 954b58f0184cbbdd7baaa971f663339ba63b4b82
             // 
             // CollegeName
             // 
             this.CollegeName.DataPropertyName = "CollegeName";
             this.CollegeName.HeaderText = "CollegeName";
+<<<<<<< HEAD
             this.CollegeName.MinimumWidth = 6;
             this.CollegeName.Name = "CollegeName";
             this.CollegeName.Width = 125;
+=======
+            this.CollegeName.Name = "CollegeName";
+>>>>>>> 954b58f0184cbbdd7baaa971f663339ba63b4b82
             // 
             // CollegeCode
             // 
             this.CollegeCode.DataPropertyName = "CollegeCode";
             this.CollegeCode.HeaderText = "CollegeCode";
+<<<<<<< HEAD
             this.CollegeCode.MinimumWidth = 6;
             this.CollegeCode.Name = "CollegeCode";
             this.CollegeCode.Width = 125;
+=======
+            this.CollegeCode.Name = "CollegeCode";
+>>>>>>> 954b58f0184cbbdd7baaa971f663339ba63b4b82
             // 
             // IsActive
             // 
             this.IsActive.DataPropertyName = "isActive";
             this.IsActive.HeaderText = "isActive";
+<<<<<<< HEAD
             this.IsActive.MinimumWidth = 6;
             this.IsActive.Name = "IsActive";
             this.IsActive.Width = 125;
+=======
+            this.IsActive.Name = "IsActive";
+>>>>>>> 954b58f0184cbbdd7baaa971f663339ba63b4b82
             // 
             // collegeBindingSource
             // 
@@ -561,6 +601,7 @@
             // 
             this.departmentTableAdapter.ClearBeforeFill = true;
             // 
+<<<<<<< HEAD
             // logOut
             // 
             this.logOut.BackColor = System.Drawing.Color.RoyalBlue;
@@ -576,6 +617,21 @@
             this.logOut.Text = "Log out";
             this.logOut.UseVisualStyleBackColor = false;
             this.logOut.Click += new System.EventHandler(this.logOut_Click);
+=======
+            // btnexit
+            // 
+            this.btnexit.BackColor = System.Drawing.Color.Transparent;
+            this.btnexit.FlatAppearance.BorderSize = 0;
+            this.btnexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnexit.ForeColor = System.Drawing.Color.Silver;
+            this.btnexit.Location = new System.Drawing.Point(641, 9);
+            this.btnexit.Name = "btnexit";
+            this.btnexit.Size = new System.Drawing.Size(100, 29);
+            this.btnexit.TabIndex = 33;
+            this.btnexit.Text = "Exit";
+            this.btnexit.UseVisualStyleBackColor = false;
+            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
+>>>>>>> 954b58f0184cbbdd7baaa971f663339ba63b4b82
             // 
             // CollegeDatabase
             // 
@@ -583,8 +639,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1004, 820);
             this.Controls.Add(this.logOut);
+=======
+            this.ClientSize = new System.Drawing.Size(753, 602);
+            this.Controls.Add(this.btnexit);
+>>>>>>> 954b58f0184cbbdd7baaa971f663339ba63b4b82
             this.Controls.Add(this.cmbCollege);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.chckActive1);
@@ -616,6 +677,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CollegeDatabase";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CollegeDatabase";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -674,7 +736,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DepartmentNamee;
         private System.Windows.Forms.DataGridViewTextBoxColumn DepartmentCoded;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isActive2;
+<<<<<<< HEAD
         private System.Windows.Forms.Button logOut;
+=======
+        private System.Windows.Forms.Button btnexit;
+>>>>>>> 954b58f0184cbbdd7baaa971f663339ba63b4b82
     }
 }
 

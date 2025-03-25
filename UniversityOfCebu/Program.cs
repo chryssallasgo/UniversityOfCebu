@@ -16,7 +16,7 @@ namespace UniversityOfCebu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CollegeDatabase());
+            Application.Run(new Login());
         }
     }
 }
