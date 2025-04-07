@@ -35,7 +35,7 @@ namespace UniversityOfCebu
                 {
                     conn.Open();
 
-                    string query = "SELECT COUNT(1) FROM Users WHERE [Username] = @Username AND [Password] = @Password";
+                    string query = "SELECT COUNT(1) FROM [User] WHERE [username] = @Username AND [password] = @Password";
 
                     using (OleDbCommand cmd = new OleDbCommand(query, conn))
                     {

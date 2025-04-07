@@ -75,12 +75,7 @@
             this.collegeTableAdapter = new UniversityOfCebu.Database1DataSet3TableAdapters.CollegeTableAdapter();
             this.departmentTableAdapter = new UniversityOfCebu.Database1DataSet4TableAdapters.DepartmentTableAdapter();
 
-            this.logOut = new System.Windows.Forms.Button();
-            this.btnexit = new System.Windows.Forms.Button();
-
-
-            this.btnexit = new System.Windows.Forms.Button();
-            this.logOut = new System.Windows.Forms.Button();
+            
 
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
@@ -676,76 +671,13 @@
             this.departmentTableAdapter.ClearBeforeFill = true;
             // 
 
-            // logOut
-            // 
-            this.logOut.BackColor = System.Drawing.Color.RoyalBlue;
-            this.logOut.FlatAppearance.BorderSize = 0;
-            this.logOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logOut.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logOut.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.logOut.Location = new System.Drawing.Point(840, 754);
-            this.logOut.Margin = new System.Windows.Forms.Padding(4);
-            this.logOut.Name = "logOut";
-            this.logOut.Size = new System.Drawing.Size(151, 27);
-            this.logOut.TabIndex = 33;
-            this.logOut.Text = "Log out";
-            this.logOut.UseVisualStyleBackColor = false;
-            this.logOut.Click += new System.EventHandler(this.logOut_Click);
-
-
-
-            // btnexit
-            // 
-            this.btnexit.BackColor = System.Drawing.Color.Transparent;
-            this.btnexit.FlatAppearance.BorderSize = 0;
-            this.btnexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnexit.ForeColor = System.Drawing.Color.Silver;
-            this.btnexit.Location = new System.Drawing.Point(641, 9);
-            this.btnexit.Name = "btnexit";
-            this.btnexit.Size = new System.Drawing.Size(100, 29);
-            this.btnexit.TabIndex = 33;
-            this.btnexit.Text = "Exit";
-            this.btnexit.UseVisualStyleBackColor = false;
-            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
-
-            // logOut
-            // 
-            this.logOut.BackColor = System.Drawing.Color.RoyalBlue;
-            this.logOut.FlatAppearance.BorderSize = 0;
-            this.logOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logOut.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logOut.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.logOut.Location = new System.Drawing.Point(840, 754);
-            this.logOut.Margin = new System.Windows.Forms.Padding(4);
-            this.logOut.Name = "logOut";
-            this.logOut.Size = new System.Drawing.Size(151, 27);
-            this.logOut.TabIndex = 33;
-            this.logOut.Text = "Log out";
-            this.logOut.UseVisualStyleBackColor = false;
-            this.logOut.Click += new System.EventHandler(this.logOut_Click);
-
-
-            // 
-            // CollegeDatabase
-            // 
+            
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 
-            this.ClientSize = new System.Drawing.Size(1004, 820);
-            this.Controls.Add(this.logOut);
-
-            this.ClientSize = new System.Drawing.Size(753, 602);
-            this.Controls.Add(this.btnexit);
-
-
-
-            this.ClientSize = new System.Drawing.Size(753, 602);
-            this.Controls.Add(this.btnexit);
-
-            this.ClientSize = new System.Drawing.Size(1004, 820);
-            this.Controls.Add(this.logOut);
+           
 
             this.Controls.Add(this.cmbCollege);
             this.Controls.Add(this.label12);
@@ -842,9 +774,6 @@
         private System.Windows.Forms.Button btnexit;
 
 
-
-        private System.Windows.Forms.Button btnexit;
-        private System.Windows.Forms.Button logOut;
 
 
     }

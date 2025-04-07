@@ -39,15 +39,19 @@ namespace UniversityOfCebu
                 using (OleDbConnection conn = DatabaseHelper.GetConnection())
                 {
                     conn.Open();
-                    string query = "INSERT INTO Users ([Username], [Email], [Password]) VALUES (@Username, @Password, @Email)";
+                    string query = "INSERT INTO [User] ([username], [password], [email]) VALUES (?, ?, ?)";
                     using (OleDbCommand cmd = new OleDbCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@Username", regname);
-                        cmd.Parameters.AddWithValue("@Email", email);
-                        cmd.Parameters.AddWithValue("@Password", pswrd);
+                        // Order matters for OleDb - must match the order in VALUES (?, ?, ?)
+                        cmd.Parameters.AddWithValue("?", regname);  // Username
+                        cmd.Parameters.AddWithValue("?", pswrd);    // Password
+                        cmd.Parameters.AddWithValue("?", email);    // Email
 
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("User added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                        Login login = new Login();
+                        login.Show();
                     }
                 }
             }
