@@ -74,9 +74,6 @@
             this.cmbCollege = new System.Windows.Forms.ComboBox();
             this.collegeTableAdapter = new UniversityOfCebu.Database1DataSet3TableAdapters.CollegeTableAdapter();
             this.departmentTableAdapter = new UniversityOfCebu.Database1DataSet4TableAdapters.DepartmentTableAdapter();
-
-            
-
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet4)).BeginInit();
@@ -97,7 +94,7 @@
             this.isActive2});
             this.dataGridView2.DataSource = this.departmentBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(16, 542);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.Size = new System.Drawing.Size(944, 185);
@@ -108,99 +105,41 @@
             // 
             this.DepartmentID.DataPropertyName = "DepartmentID";
             this.DepartmentID.HeaderText = "DepartmentID";
-
             this.DepartmentID.MinimumWidth = 6;
             this.DepartmentID.Name = "DepartmentID";
             this.DepartmentID.Width = 125;
-
-            this.DepartmentID.Name = "DepartmentID";
-
-
-            this.DepartmentID.Name = "DepartmentID";
-            this.DepartmentID.MinimumWidth = 6;
-            this.DepartmentID.Name = "DepartmentID";
-            this.DepartmentID.Width = 125;
-
             // 
             // CollegeIDs
             // 
             this.CollegeIDs.DataPropertyName = "CollegeID";
             this.CollegeIDs.HeaderText = "CollegeID";
-
             this.CollegeIDs.MinimumWidth = 6;
             this.CollegeIDs.Name = "CollegeIDs";
             this.CollegeIDs.Width = 125;
-
-            this.CollegeIDs.Name = "CollegeIDs";
-
-
-
-            this.CollegeIDs.MinimumWidth = 6;
-            this.CollegeIDs.Name = "CollegeIDs";
-            this.CollegeIDs.Width = 125;
-
-
             // 
             // DepartmentNamee
             // 
             this.DepartmentNamee.DataPropertyName = "DepartmentName";
             this.DepartmentNamee.HeaderText = "DepartmentName";
-
             this.DepartmentNamee.MinimumWidth = 6;
             this.DepartmentNamee.Name = "DepartmentNamee";
             this.DepartmentNamee.Width = 125;
-
-            this.DepartmentNamee.Name = "DepartmentNamee";
-
             // 
-
-
-            this.DepartmentNamee.Name = "DepartmentNamee";
-
-            this.DepartmentNamee.MinimumWidth = 6;
-            this.DepartmentNamee.Name = "DepartmentNamee";
-            this.DepartmentNamee.Width = 125;
-        // 
-
             // DepartmentCoded
             // 
             this.DepartmentCoded.DataPropertyName = "DepartmentCode";
             this.DepartmentCoded.HeaderText = "DepartmentCode";
-
             this.DepartmentCoded.MinimumWidth = 6;
             this.DepartmentCoded.Name = "DepartmentCoded";
             this.DepartmentCoded.Width = 125;
-
-            this.DepartmentCoded.Name = "DepartmentCoded";
-
-
-            this.DepartmentCoded.Name = "DepartmentCoded";
-
-            this.DepartmentCoded.MinimumWidth = 6;
-            this.DepartmentCoded.Name = "DepartmentCoded";
-            this.DepartmentCoded.Width = 125;
-
-
             // 
             // isActive2
             // 
             this.isActive2.DataPropertyName = "isActive";
             this.isActive2.HeaderText = "isActive";
-
             this.isActive2.MinimumWidth = 6;
             this.isActive2.Name = "isActive2";
             this.isActive2.Width = 125;
-
-            this.isActive2.Name = "isActive2";
-
-
-            this.isActive2.Name = "isActive2";
-
-            this.isActive2.MinimumWidth = 6;
-            this.isActive2.Name = "isActive2";
-            this.isActive2.Width = 125;
-
-
             // 
             // departmentBindingSource
             // 
@@ -246,7 +185,7 @@
             this.upDel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upDel.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.upDel.Location = new System.Drawing.Point(809, 507);
-            this.upDel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.upDel.Margin = new System.Windows.Forms.Padding(4);
             this.upDel.Name = "upDel";
             this.upDel.Size = new System.Drawing.Size(151, 27);
             this.upDel.TabIndex = 10;
@@ -262,7 +201,7 @@
             this.upDep.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upDep.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.upDep.Location = new System.Drawing.Point(651, 507);
-            this.upDep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.upDep.Margin = new System.Windows.Forms.Padding(4);
             this.upDep.Name = "upDep";
             this.upDep.Size = new System.Drawing.Size(151, 27);
             this.upDep.TabIndex = 9;
@@ -278,7 +217,7 @@
             this.addDep.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addDep.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.addDep.Location = new System.Drawing.Point(492, 507);
-            this.addDep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addDep.Margin = new System.Windows.Forms.Padding(4);
             this.addDep.Name = "addDep";
             this.addDep.Size = new System.Drawing.Size(151, 27);
             this.addDep.TabIndex = 8;
@@ -304,7 +243,7 @@
             this.depid.BackColor = System.Drawing.Color.DarkGray;
             this.depid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.depid.Location = new System.Drawing.Point(439, 427);
-            this.depid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.depid.Margin = new System.Windows.Forms.Padding(4);
             this.depid.Name = "depid";
             this.depid.Size = new System.Drawing.Size(122, 22);
             this.depid.TabIndex = 23;
@@ -312,7 +251,7 @@
             // depcode
             // 
             this.depcode.Location = new System.Drawing.Point(152, 459);
-            this.depcode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.depcode.Margin = new System.Windows.Forms.Padding(4);
             this.depcode.Name = "depcode";
             this.depcode.Size = new System.Drawing.Size(171, 22);
             this.depcode.TabIndex = 22;
@@ -333,7 +272,7 @@
             // depname
             // 
             this.depname.Location = new System.Drawing.Point(152, 427);
-            this.depname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.depname.Margin = new System.Windows.Forms.Padding(4);
             this.depname.Name = "depname";
             this.depname.Size = new System.Drawing.Size(171, 22);
             this.depname.TabIndex = 20;
@@ -369,7 +308,7 @@
             this.chckActive1.AutoSize = true;
             this.chckActive1.BackColor = System.Drawing.SystemColors.Highlight;
             this.chckActive1.Location = new System.Drawing.Point(439, 463);
-            this.chckActive1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chckActive1.Margin = new System.Windows.Forms.Padding(4);
             this.chckActive1.Name = "chckActive1";
             this.chckActive1.Size = new System.Drawing.Size(53, 20);
             this.chckActive1.TabIndex = 30;
@@ -387,7 +326,7 @@
             this.IsActive});
             this.dataGridView1.DataSource = this.collegeBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(16, 215);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -399,79 +338,30 @@
             // 
             this.CollegeID.DataPropertyName = "CollegeID";
             this.CollegeID.HeaderText = "CollegeID";
-
             this.CollegeID.MinimumWidth = 6;
             this.CollegeID.Name = "CollegeID";
             this.CollegeID.Width = 125;
-
-            this.CollegeID.Name = "CollegeID";
-
-
-
-            this.CollegeID.Name = "CollegeID";
-
-            this.CollegeID.MinimumWidth = 6;
-            this.CollegeID.Name = "CollegeID";
-            this.CollegeID.Width = 125;
-
-           // 
+            // 
             // CollegeName
             // 
             this.CollegeName.DataPropertyName = "CollegeName";
             this.CollegeName.HeaderText = "CollegeName";
-
             this.CollegeName.MinimumWidth = 6;
             this.CollegeName.Name = "CollegeName";
             this.CollegeName.Width = 125;
-
-            this.CollegeName.Name = "CollegeName";
-
-
-
-            this.CollegeName.Name = "CollegeName";
-
-            this.CollegeName.MinimumWidth = 6;
-            this.CollegeName.Name = "CollegeName";
-            this.CollegeName.Width = 125;
-
-
             // 
             // CollegeCode
             // 
             this.CollegeCode.DataPropertyName = "CollegeCode";
             this.CollegeCode.HeaderText = "CollegeCode";
-
-
             this.CollegeCode.MinimumWidth = 6;
             this.CollegeCode.Name = "CollegeCode";
             this.CollegeCode.Width = 125;
-
-            this.CollegeCode.Name = "CollegeCode";
-
-
-
-            this.CollegeCode.Name = "CollegeCode";
-            this.CollegeCode.MinimumWidth = 6;
-            this.CollegeCode.Name = "CollegeCode";
-            this.CollegeCode.Width = 125;
-
-
             // 
             // IsActive
             // 
             this.IsActive.DataPropertyName = "isActive";
             this.IsActive.HeaderText = "isActive";
-
-            this.IsActive.MinimumWidth = 6;
-            this.IsActive.Name = "IsActive";
-            this.IsActive.Width = 125;
-
-            this.IsActive.Name = "IsActive";
-
-
-
-            this.IsActive.Name = "IsActive";
-
             this.IsActive.MinimumWidth = 6;
             this.IsActive.Name = "IsActive";
             this.IsActive.Width = 125;
@@ -494,7 +384,7 @@
             this.addCol.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addCol.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.addCol.Location = new System.Drawing.Point(492, 185);
-            this.addCol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addCol.Margin = new System.Windows.Forms.Padding(4);
             this.addCol.Name = "addCol";
             this.addCol.Size = new System.Drawing.Size(151, 27);
             this.addCol.TabIndex = 2;
@@ -510,7 +400,7 @@
             this.upCol.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upCol.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.upCol.Location = new System.Drawing.Point(651, 185);
-            this.upCol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.upCol.Margin = new System.Windows.Forms.Padding(4);
             this.upCol.Name = "upCol";
             this.upCol.Size = new System.Drawing.Size(151, 27);
             this.upCol.TabIndex = 3;
@@ -526,7 +416,7 @@
             this.delCol.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delCol.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.delCol.Location = new System.Drawing.Point(809, 185);
-            this.delCol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.delCol.Margin = new System.Windows.Forms.Padding(4);
             this.delCol.Name = "delCol";
             this.delCol.Size = new System.Drawing.Size(151, 27);
             this.delCol.TabIndex = 4;
@@ -564,7 +454,7 @@
             // colname
             // 
             this.colname.Location = new System.Drawing.Point(152, 105);
-            this.colname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.colname.Margin = new System.Windows.Forms.Padding(4);
             this.colname.Name = "colname";
             this.colname.Size = new System.Drawing.Size(171, 22);
             this.colname.TabIndex = 12;
@@ -587,7 +477,7 @@
             // colcode
             // 
             this.colcode.Location = new System.Drawing.Point(152, 137);
-            this.colcode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.colcode.Margin = new System.Windows.Forms.Padding(4);
             this.colcode.Name = "colcode";
             this.colcode.Size = new System.Drawing.Size(171, 22);
             this.colcode.TabIndex = 14;
@@ -596,7 +486,7 @@
             // colid
             // 
             this.colid.Location = new System.Drawing.Point(416, 105);
-            this.colid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.colid.Margin = new System.Windows.Forms.Padding(4);
             this.colid.Name = "colid";
             this.colid.Size = new System.Drawing.Size(121, 22);
             this.colid.TabIndex = 16;
@@ -633,7 +523,7 @@
             this.chckActive.AutoSize = true;
             this.chckActive.BackColor = System.Drawing.SystemColors.Highlight;
             this.chckActive.Location = new System.Drawing.Point(416, 139);
-            this.chckActive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chckActive.Margin = new System.Windows.Forms.Padding(4);
             this.chckActive.Name = "chckActive";
             this.chckActive.Size = new System.Drawing.Size(53, 20);
             this.chckActive.TabIndex = 29;
@@ -657,7 +547,7 @@
             // 
             this.cmbCollege.FormattingEnabled = true;
             this.cmbCollege.Location = new System.Drawing.Point(651, 426);
-            this.cmbCollege.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbCollege.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCollege.Name = "cmbCollege";
             this.cmbCollege.Size = new System.Drawing.Size(116, 24);
             this.cmbCollege.TabIndex = 32;
@@ -670,15 +560,13 @@
             // 
             this.departmentTableAdapter.ClearBeforeFill = true;
             // 
-
-            
+            // CollegeDatabase
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-
-           
-
+            this.ClientSize = new System.Drawing.Size(1049, 819);
             this.Controls.Add(this.cmbCollege);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.chckActive1);
@@ -708,7 +596,7 @@
             this.Controls.Add(this.addCol);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CollegeDatabase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CollegeDatabase";
