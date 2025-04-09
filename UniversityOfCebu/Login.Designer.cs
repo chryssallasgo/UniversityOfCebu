@@ -38,13 +38,14 @@
             this.btnexit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.chckShowPassword = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnlog
             // 
             this.btnlog.Location = new System.Drawing.Point(173, 431);
-            this.btnlog.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnlog.Margin = new System.Windows.Forms.Padding(4);
             this.btnlog.Name = "btnlog";
             this.btnlog.Size = new System.Drawing.Size(133, 36);
             this.btnlog.TabIndex = 0;
@@ -81,7 +82,7 @@
             // usrnm
             // 
             this.usrnm.Location = new System.Drawing.Point(173, 304);
-            this.usrnm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usrnm.Margin = new System.Windows.Forms.Padding(4);
             this.usrnm.Name = "usrnm";
             this.usrnm.Size = new System.Drawing.Size(132, 22);
             this.usrnm.TabIndex = 3;
@@ -89,8 +90,9 @@
             // pswrd
             // 
             this.pswrd.Location = new System.Drawing.Point(173, 367);
-            this.pswrd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pswrd.Margin = new System.Windows.Forms.Padding(4);
             this.pswrd.Name = "pswrd";
+            this.pswrd.PasswordChar = '*';
             this.pswrd.Size = new System.Drawing.Size(132, 22);
             this.pswrd.TabIndex = 4;
             // 
@@ -101,7 +103,7 @@
             this.btnregis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnregis.ForeColor = System.Drawing.Color.Silver;
             this.btnregis.Location = new System.Drawing.Point(248, 526);
-            this.btnregis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnregis.Margin = new System.Windows.Forms.Padding(4);
             this.btnregis.Name = "btnregis";
             this.btnregis.Size = new System.Drawing.Size(133, 36);
             this.btnregis.TabIndex = 6;
@@ -116,7 +118,7 @@
             this.btnexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnexit.ForeColor = System.Drawing.Color.Silver;
             this.btnexit.Location = new System.Drawing.Point(-1, 526);
-            this.btnexit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnexit.Margin = new System.Windows.Forms.Padding(4);
             this.btnexit.Name = "btnexit";
             this.btnexit.Size = new System.Drawing.Size(133, 36);
             this.btnexit.TabIndex = 7;
@@ -149,6 +151,19 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "College \r\nDatabase";
             // 
+            // chckShowPassword
+            // 
+            this.chckShowPassword.AutoSize = true;
+            this.chckShowPassword.BackColor = System.Drawing.Color.Transparent;
+            this.chckShowPassword.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.chckShowPassword.Location = new System.Drawing.Point(173, 396);
+            this.chckShowPassword.Name = "chckShowPassword";
+            this.chckShowPassword.Size = new System.Drawing.Size(125, 20);
+            this.chckShowPassword.TabIndex = 18;
+            this.chckShowPassword.Text = "Show Password";
+            this.chckShowPassword.UseVisualStyleBackColor = false;
+            this.chckShowPassword.CheckedChanged += new System.EventHandler(this.chckShowPassword_CheckedChanged);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -156,6 +171,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(381, 562);
+            this.Controls.Add(this.chckShowPassword);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnexit);
@@ -165,7 +181,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnlog);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -187,5 +203,6 @@
         private System.Windows.Forms.Button btnexit;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox chckShowPassword;
     }
 }

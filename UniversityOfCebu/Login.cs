@@ -83,5 +83,17 @@ namespace UniversityOfCebu
         {
 
         }
+
+        private void chckShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chckShowPassword.Checked)
+            {
+                pswrd.PasswordChar = '\0'; // Show password
+            }
+            else
+            {
+                pswrd.PasswordChar = '*'; // Hide password
+            }
+        }
     }
 }
