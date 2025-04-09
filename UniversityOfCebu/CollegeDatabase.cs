@@ -426,7 +426,28 @@ namespace UniversityOfCebu
             this.Close();
 
         }
-        
+
+        private void LO1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+               "Are you sure you want to logout?",
+               "Confirm Logout",
+               MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question
+           );
+
+            if (result == DialogResult.Yes)
+            {
+                
+                this.Hide();
+
+                
+                Login login = new Login();
+                login.Show();
+
+                
+            }
+        }
     }
 }
 

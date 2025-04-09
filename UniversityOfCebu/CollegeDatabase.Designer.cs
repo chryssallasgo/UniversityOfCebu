@@ -74,12 +74,14 @@
             this.cmbCollege = new System.Windows.Forms.ComboBox();
             this.collegeTableAdapter = new UniversityOfCebu.Database1DataSet3TableAdapters.CollegeTableAdapter();
             this.departmentTableAdapter = new UniversityOfCebu.Database1DataSet4TableAdapters.DepartmentTableAdapter();
+            this.LO1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.collegeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LO1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView2
@@ -560,6 +562,18 @@
             // 
             this.departmentTableAdapter.ClearBeforeFill = true;
             // 
+            // LO1
+            // 
+            this.LO1.BackColor = System.Drawing.Color.Transparent;
+            this.LO1.Image = ((System.Drawing.Image)(resources.GetObject("LO1.Image")));
+            this.LO1.Location = new System.Drawing.Point(963, 11);
+            this.LO1.Name = "LO1";
+            this.LO1.Size = new System.Drawing.Size(74, 76);
+            this.LO1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LO1.TabIndex = 33;
+            this.LO1.TabStop = false;
+            this.LO1.Click += new System.EventHandler(this.LO1_Click);
+            // 
             // CollegeDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -567,6 +581,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1049, 819);
+            this.Controls.Add(this.LO1);
             this.Controls.Add(this.cmbCollege);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.chckActive1);
@@ -607,6 +622,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.collegeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LO1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -660,10 +676,7 @@
         private System.Windows.Forms.Button logOut;
 
         private System.Windows.Forms.Button btnexit;
-
-
-
-
+        private System.Windows.Forms.PictureBox LO1;
     }
 }
 
