@@ -426,7 +426,86 @@ namespace UniversityOfCebu
             this.Close();
 
         }
-        
+
+        private void ColSearchBartxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DepSearchtxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ColSearchbtn_Click(object sender, EventArgs e)
+        {
+            SearchColleges(ColSearchBartxt.Text.Trim());
+        }
+
+        private void SearchColleges(string searchTerm)
+        {
+            try
+            {
+                using (OleDbConnection conn = DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+                    string query = "SELECT * FROM College WHERE CollegeName LIKE @search OR CollegeCode LIKE @search";
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(query, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@search", "%" + searchTerm + "%");
+
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    dataGridView1.DataSource = dt;
+
+                    if (dt.Rows.Count == 0)
+                    {
+                        MessageBox.Show("No colleges found matching your search criteria.", "Search Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error searching colleges: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void DepSearchbtn_Click(object sender, EventArgs e)
+        {
+            SearchDepartments(DepSearchtxt.Text.Trim());
+        }
+        git
+        private void SearchDepartments(string searchTerm)
+        {
+            try
+            {
+                using (OleDbConnection conn = DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+                    string query = @"SELECT d.*, c.CollegeName 
+                            FROM Department d
+                            INNER JOIN College c ON d.CollegeID = c.CollegeID
+                            WHERE d.DepartmentName LIKE @search 
+                            OR d.DepartmentCode LIKE @search
+                            OR c.CollegeName LIKE @search";
+
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(query, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@search", "%" + searchTerm + "%");
+
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    dataGridView2.DataSource = dt;
+
+                    if (dt.Rows.Count == 0)
+                    {
+                        MessageBox.Show("No departments found matching your search criteria.", "Search Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error searching departments: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
 

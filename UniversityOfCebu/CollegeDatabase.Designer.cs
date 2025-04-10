@@ -74,6 +74,10 @@
             this.cmbCollege = new System.Windows.Forms.ComboBox();
             this.collegeTableAdapter = new UniversityOfCebu.Database1DataSet3TableAdapters.CollegeTableAdapter();
             this.departmentTableAdapter = new UniversityOfCebu.Database1DataSet4TableAdapters.DepartmentTableAdapter();
+            this.ColSearchBartxt = new System.Windows.Forms.TextBox();
+            this.DepSearchtxt = new System.Windows.Forms.TextBox();
+            this.ColSearchbtn = new System.Windows.Forms.Button();
+            this.DepSearchbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet4)).BeginInit();
@@ -93,7 +97,7 @@
             this.DepartmentCoded,
             this.isActive2});
             this.dataGridView2.DataSource = this.departmentBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(16, 542);
+            this.dataGridView2.Location = new System.Drawing.Point(21, 621);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
@@ -170,7 +174,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label2.Location = new System.Drawing.Point(8, 497);
+            this.label2.Location = new System.Drawing.Point(13, 576);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 36);
@@ -184,7 +188,7 @@
             this.upDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.upDel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upDel.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.upDel.Location = new System.Drawing.Point(809, 507);
+            this.upDel.Location = new System.Drawing.Point(814, 586);
             this.upDel.Margin = new System.Windows.Forms.Padding(4);
             this.upDel.Name = "upDel";
             this.upDel.Size = new System.Drawing.Size(151, 27);
@@ -200,7 +204,7 @@
             this.upDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.upDep.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upDep.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.upDep.Location = new System.Drawing.Point(651, 507);
+            this.upDep.Location = new System.Drawing.Point(656, 586);
             this.upDep.Margin = new System.Windows.Forms.Padding(4);
             this.upDep.Name = "upDep";
             this.upDep.Size = new System.Drawing.Size(151, 27);
@@ -216,7 +220,7 @@
             this.addDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addDep.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addDep.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addDep.Location = new System.Drawing.Point(492, 507);
+            this.addDep.Location = new System.Drawing.Point(497, 586);
             this.addDep.Margin = new System.Windows.Forms.Padding(4);
             this.addDep.Name = "addDep";
             this.addDep.Size = new System.Drawing.Size(151, 27);
@@ -231,7 +235,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label9.Location = new System.Drawing.Point(332, 431);
+            this.label9.Location = new System.Drawing.Point(332, 469);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(102, 16);
@@ -242,7 +246,7 @@
             // 
             this.depid.BackColor = System.Drawing.Color.DarkGray;
             this.depid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.depid.Location = new System.Drawing.Point(439, 427);
+            this.depid.Location = new System.Drawing.Point(439, 465);
             this.depid.Margin = new System.Windows.Forms.Padding(4);
             this.depid.Name = "depid";
             this.depid.Size = new System.Drawing.Size(122, 22);
@@ -250,7 +254,7 @@
             // 
             // depcode
             // 
-            this.depcode.Location = new System.Drawing.Point(152, 459);
+            this.depcode.Location = new System.Drawing.Point(152, 497);
             this.depcode.Margin = new System.Windows.Forms.Padding(4);
             this.depcode.Name = "depcode";
             this.depcode.Size = new System.Drawing.Size(171, 22);
@@ -262,7 +266,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label10.Location = new System.Drawing.Point(24, 463);
+            this.label10.Location = new System.Drawing.Point(24, 501);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(123, 16);
@@ -271,7 +275,7 @@
             // 
             // depname
             // 
-            this.depname.Location = new System.Drawing.Point(152, 427);
+            this.depname.Location = new System.Drawing.Point(152, 465);
             this.depname.Margin = new System.Windows.Forms.Padding(4);
             this.depname.Name = "depname";
             this.depname.Size = new System.Drawing.Size(171, 22);
@@ -283,7 +287,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label11.Location = new System.Drawing.Point(24, 431);
+            this.label11.Location = new System.Drawing.Point(24, 469);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(125, 16);
@@ -296,7 +300,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label8.Location = new System.Drawing.Point(332, 463);
+            this.label8.Location = new System.Drawing.Point(332, 501);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 16);
@@ -307,7 +311,7 @@
             // 
             this.chckActive1.AutoSize = true;
             this.chckActive1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.chckActive1.Location = new System.Drawing.Point(439, 463);
+            this.chckActive1.Location = new System.Drawing.Point(439, 501);
             this.chckActive1.Margin = new System.Windows.Forms.Padding(4);
             this.chckActive1.Name = "chckActive1";
             this.chckActive1.Size = new System.Drawing.Size(53, 20);
@@ -497,7 +501,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label7.Location = new System.Drawing.Point(332, 108);
+            this.label7.Location = new System.Drawing.Point(331, 108);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 16);
@@ -536,7 +540,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label12.Location = new System.Drawing.Point(569, 430);
+            this.label12.Location = new System.Drawing.Point(569, 468);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(76, 16);
@@ -546,7 +550,7 @@
             // cmbCollege
             // 
             this.cmbCollege.FormattingEnabled = true;
-            this.cmbCollege.Location = new System.Drawing.Point(651, 426);
+            this.cmbCollege.Location = new System.Drawing.Point(651, 464);
             this.cmbCollege.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCollege.Name = "cmbCollege";
             this.cmbCollege.Size = new System.Drawing.Size(116, 24);
@@ -560,6 +564,52 @@
             // 
             this.departmentTableAdapter.ClearBeforeFill = true;
             // 
+            // ColSearchBartxt
+            // 
+            this.ColSearchBartxt.Location = new System.Drawing.Point(632, 137);
+            this.ColSearchBartxt.Margin = new System.Windows.Forms.Padding(4);
+            this.ColSearchBartxt.Name = "ColSearchBartxt";
+            this.ColSearchBartxt.Size = new System.Drawing.Size(328, 22);
+            this.ColSearchBartxt.TabIndex = 33;
+            this.ColSearchBartxt.TextChanged += new System.EventHandler(this.ColSearchBartxt_TextChanged);
+            // 
+            // DepSearchtxt
+            // 
+            this.DepSearchtxt.Location = new System.Drawing.Point(632, 543);
+            this.DepSearchtxt.Margin = new System.Windows.Forms.Padding(4);
+            this.DepSearchtxt.Name = "DepSearchtxt";
+            this.DepSearchtxt.Size = new System.Drawing.Size(328, 22);
+            this.DepSearchtxt.TabIndex = 33;
+            this.DepSearchtxt.TextChanged += new System.EventHandler(this.DepSearchtxt_TextChanged);
+            // 
+            // ColSearchbtn
+            // 
+            this.ColSearchbtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ColSearchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ColSearchbtn.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ColSearchbtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ColSearchbtn.Location = new System.Drawing.Point(632, 102);
+            this.ColSearchbtn.Name = "ColSearchbtn";
+            this.ColSearchbtn.Size = new System.Drawing.Size(135, 27);
+            this.ColSearchbtn.TabIndex = 34;
+            this.ColSearchbtn.Text = "Search";
+            this.ColSearchbtn.UseVisualStyleBackColor = false;
+            this.ColSearchbtn.Click += new System.EventHandler(this.ColSearchbtn_Click);
+            // 
+            // DepSearchbtn
+            // 
+            this.DepSearchbtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.DepSearchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DepSearchbtn.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepSearchbtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DepSearchbtn.Location = new System.Drawing.Point(632, 509);
+            this.DepSearchbtn.Name = "DepSearchbtn";
+            this.DepSearchbtn.Size = new System.Drawing.Size(135, 27);
+            this.DepSearchbtn.TabIndex = 34;
+            this.DepSearchbtn.Text = "Search";
+            this.DepSearchbtn.UseVisualStyleBackColor = false;
+            this.DepSearchbtn.Click += new System.EventHandler(this.DepSearchbtn_Click);
+            // 
             // CollegeDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -567,6 +617,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1049, 819);
+            this.Controls.Add(this.DepSearchbtn);
+            this.Controls.Add(this.ColSearchbtn);
+            this.Controls.Add(this.DepSearchtxt);
+            this.Controls.Add(this.ColSearchBartxt);
             this.Controls.Add(this.cmbCollege);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.chckActive1);
@@ -660,10 +714,10 @@
         private System.Windows.Forms.Button logOut;
 
         private System.Windows.Forms.Button btnexit;
-
-
-
-
+        private System.Windows.Forms.TextBox ColSearchBartxt;
+        private System.Windows.Forms.TextBox DepSearchtxt;
+        private System.Windows.Forms.Button ColSearchbtn;
+        private System.Windows.Forms.Button DepSearchbtn;
     }
 }
 
