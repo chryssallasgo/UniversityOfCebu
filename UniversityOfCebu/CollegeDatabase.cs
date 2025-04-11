@@ -70,6 +70,7 @@ namespace UniversityOfCebu
                 colcode.Text = row.Cells["CollegeCode"].Value.ToString();
                 chckActive.Checked = Convert.ToBoolean(row.Cells["IsActive"].Value);
             }
+            dataGridView1.Sort(dataGridView1.Columns["CollegeID"], ListSortDirection.Ascending); // Sort by CollegeID
 
         }
 
@@ -406,6 +407,7 @@ namespace UniversityOfCebu
                 depcode.Text = row.Cells["DepartmentCoded"].Value.ToString();
                 chckActive1.Checked = Convert.ToBoolean(row.Cells["IsActive2"].Value);
             }
+            dataGridView2.Sort(dataGridView2.Columns["DepartmentID"], ListSortDirection.Ascending); // Sort by DepartmentID
         }
 
         private void logOut_Click(object sender, EventArgs e)
